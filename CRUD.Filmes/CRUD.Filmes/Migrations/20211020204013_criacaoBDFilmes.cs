@@ -11,7 +11,7 @@ namespace CRUD.Filmes.Migrations
                 name: "Filmes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    FilmeId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Genero = table.Column<string>(nullable: true),
                     Titulo = table.Column<string>(nullable: true),
@@ -20,7 +20,7 @@ namespace CRUD.Filmes.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Filmes", x => x.Id);
+                    table.PrimaryKey("PK_Filmes", x => x.FilmeId);
                 });
         }
 

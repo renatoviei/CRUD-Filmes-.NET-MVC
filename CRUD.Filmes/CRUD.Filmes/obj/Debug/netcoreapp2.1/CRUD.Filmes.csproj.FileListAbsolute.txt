@@ -34,3 +34,7 @@ C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\obj
 C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\obj\Debug\netcoreapp2.1\CRUD.Filmes.genruntimeconfig.cache
 C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\obj\Debug\netcoreapp2.1\CRUD.Filmes.csproj.CopyComplete
 C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\bin\Debug\netcoreapp2.1\bundleconfig.json
+C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\obj\Debug\netcoreapp2.1\Razor\Views\Filmes\Index.cshtml.g.cs
+C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\obj\Debug\netcoreapp2.1\Razor\Views\Filmes\CriarFilme.cshtml.g.cs
+C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\obj\Debug\netcoreapp2.1\Razor\Views\Filmes\AtualizarFilme.cshtml.g.cs
+C:\Users\tm_re\Documents\GitHub\CRUD-Filmes-.NET-MVC\CRUD.Filmes\CRUD.Filmes\obj\Debug\netcoreapp2.1\Razor\Views\Filmes\ExcluirFilme.cshtml.g.cs

@@ -43,8 +43,8 @@
                 @Html.DisplayFor(modelItem => item.Ano)
             </td>
             <td>
-                <a asp-action="AtualizarFilme" asp-route-id="@item.Id">Edit</a> |            
-                <a asp-action="ExcluirFilme" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="AtualizarFilme" asp-route-id="@item.FilmeId">Edit</a> |            
+                <a asp-action="ExcluirFilme" asp-route-id="@item.FilmeId">Delete</a>
             </td>
         </tr>
 }

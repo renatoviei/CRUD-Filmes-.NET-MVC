@@ -14,13 +14,13 @@ namespace CRUD.Filmes.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
+                .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("CRUD.Filmes.Models.Filme", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("FilmeId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -32,7 +32,7 @@ namespace CRUD.Filmes.Migrations
 
                     b.Property<string>("Titulo");
 
-                    b.HasKey("Id");
+                    b.HasKey("FilmeId");
 
                     b.ToTable("Filmes");
                 });

@@ -47,8 +47,8 @@ namespace CRUD.Filmes.Controllers
             if (id != null)
             {
                 
-                    Filme filme = _contexto.Filmes.Find(id);
-                    return View(filme);
+               Filme filme = _contexto.Filmes.Find(id);
+               return View(filme);
                 
             }
             else return NotFound();           
@@ -61,7 +61,7 @@ namespace CRUD.Filmes.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _contexto.Filmes.Update(filme);
+                    _contexto.Filmes.Update(filme);                    
                     await _contexto.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -86,9 +86,8 @@ namespace CRUD.Filmes.Controllers
         {
             if (id != null)
             {
-                _contexto.Filmes.Update(filme);
-                await _contexto.SaveChangesAsync();
-
+                _contexto.Filmes.Remove(filme);          
+                await _contexto.SaveChangesAsync();               
                 return RedirectToAction(nameof(Index));
             }
             else return NotFound();
