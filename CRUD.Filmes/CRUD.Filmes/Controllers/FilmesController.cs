@@ -31,14 +31,13 @@ namespace CRUD.Filmes.Controllers
         [HttpPost]
         public async Task<IActionResult> CriarFilme(Filme filme)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                _contexto.Filmes.Update(filme);
+                _contexto.Add(filme);
                 await _contexto.SaveChangesAsync();
-
                 return RedirectToAction(nameof(Index));
             }
-            else return View();
+            else return View(filme);
         }
 
         [HttpGet]
@@ -46,28 +45,25 @@ namespace CRUD.Filmes.Controllers
         {
             if (id != null)
             {
-                
-               Filme filme = _contexto.Filmes.Find(id);
-               return View(filme);
-                
+                Filme filme = _contexto.Filmes.Find(id);
+                return View(filme);
+
             }
-            else return NotFound();           
+            else return NotFound();
         }
 
         [HttpPost]
-        public async Task<IActionResult> AtualizarFilme(int? id, Filme filme)
+        public async Task<IActionResult> AtualizarFilme(int id, Filme filme)
         {
-            if (id != null)
+            //filme.FilmeId = id;
+
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    _contexto.Filmes.Update(filme);                    
-                    await _contexto.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
-                else return View(filme);
+                _contexto.Update(filme);
+                await _contexto.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            else return NotFound();
+            else return View(filme);
         }
 
         [HttpGet]
@@ -82,15 +78,14 @@ namespace CRUD.Filmes.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ExcluirFilme(int? id, Filme filme)
+        public async Task<IActionResult> ExcluirFilme(int id)
         {
-            if (id != null)
-            {
-                _contexto.Filmes.Remove(filme);          
-                await _contexto.SaveChangesAsync();               
-                return RedirectToAction(nameof(Index));
-            }
-            else return NotFound();
+
+            Filme filme = _contexto.Filmes.Find(id);
+            _contexto.Remove(filme);
+            await _contexto.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
         }
 
     }
